@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Calculator</title>
+<style>
+#output {color: teal; background-color: aquamarine;}
+</style>
+<script>
+function myFunction(){
+	var form = document.getElementById("calc");
+	var NumberOne = parseInt(form.elements[0].value);
+	var operation = form.elements[1].value;
+	var NumberTwo = parseInt(form.elements[2].value);
+	var answer = 0;
+	if (operation == "addition"){
+		answer = NumberOne + NumberTwo;
+	} else if (operation == "subtraction"){
+		answer = NumberOne - NumberTwo;
+	} else if (operation == "multiply"){
+		answer = NumberOne * NumberTwo;
+	} else if (operation == "divide"){
+		answer = NumberOne / NumberTwo;
+	}
+	document.getElementById("output").innerHTML = answer;
+}
+</script>
+</head>
+<body>
+<a href="Length_Converter.html">Length Converter Calculator</a>
+<h1>Calculator</h1>
+<form id="calc">
+	<input type = "text">  
+    	<select>
+		   <option value = "addition">+</option>
+		   <option value = "subtraction">-</option>
+		   <option value = "multiply">*</option>
+		   <option value = "divide">/</option>
+        </select>
+    <input type = "text">
+</form>
+<p id="output">Answer</p>
+<br>
+<button onclick = "myFunction()">=</button>
+<br>
+</body>
+</html>

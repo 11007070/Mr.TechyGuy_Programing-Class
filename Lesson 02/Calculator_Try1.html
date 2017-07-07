@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Calculator</title>
+<style>
+
+</style>
+ <script>
+        	function functionReset(){
+            	document.getElementById("form1").reset();
+            }
+            function getValues(){
+            	var form = document.getElementById("form1");
+                var text = "";
+                if (form.elements[0].value || form.elements[1].value){
+                for (var i = 0; i < form.length - 1; i++){
+                	text += form.elements[i].value + " ";
+                }
+                } else {
+                	text += "Please enter something else!";
+              }
+              
+                document.getElementById("y").innerHTML = text;
+            }
+            </script>
+</head>
+<body>
+
+<h1>This is my calculator.</h1>
+<input type = "text" name = "fname">  <select id = "myList">
+               <option value = "1">+</option>
+               <option value = "2">-</option>
+               <option value = "3">*</option>
+               <option value = "4"></option>
+             </select><input type = "text" name = "fname">
+<br>
+<button onclick = "getValues()">=</button>
+<br>
+<input type = "text" name = "fname">
+</body>
+</html>

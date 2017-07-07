@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Feet to Inches</title>
+<style>
+h2 {color: magenta; background-color: pink;}
+#Feet {color: teal; background-color: aquamarine;}
+#Inches {color: yellow; background-color: orange;}
+</style>
+</head>
+<body>
+<a href="Right_Calculator.html">Simple Calculator</a>
+<h2>Length Converter</h2>
+  <label>Feet</label>
+  <input id="Feet" type="number" placeholder="Feet" oninput="LengthConverter(this.value)" onchange="LengthConverter(this.value)">
+<br>
+<p>Inches: <span id="Inches"></span></p>
+
+<script>
+function LengthConverter(valNum) {
+  document.getElementById("Inches").innerHTML=valNum*12;
+}
+</script>
+</body>
+</html>
